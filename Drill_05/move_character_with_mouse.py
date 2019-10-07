@@ -18,16 +18,17 @@ def handle_events():
             running = False
         elif event.type == SDL_MOUSEBUTTONDOWN:
             destination_x, destination_y = event.x, KPU_HEIGHT - 1 - event.y
-           #temp_x, temp_y = character_x, character_y
+            temp_x, temp_y = character_x, character_y
             draw_line((temp_x, temp_y), (destination_x, destination_y))
     pass
 
 def draw_line(p1, p2):
-    global character_x, character_y
+    global character_x, character_y, frame
     for i in range(0, 100 + 1, 2):
         t = i / 100
         character_x = (1 - t) * p1[0] + t * p2[0]
         character_y = (1 - t) * p1[1] + t * p2[1]
+        frame = (frame + 1) % 8
     pass
 
 open_canvas(KPU_WIDTH, KPU_HEIGHT)
@@ -50,7 +51,6 @@ while running:
     elif temp_x >= destination_x:
         character.clip_draw(frame * 100, 0, 100, 100, character_x, character_y)
     update_canvas()
-    frame = (frame + 1) % 8
 
     handle_events()
 
