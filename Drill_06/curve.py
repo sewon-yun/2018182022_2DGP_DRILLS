@@ -1,6 +1,7 @@
 import turtle
 import random
 
+# Drill 06_1을 표기하기 위함
 
 def stop():
     turtle.bye()

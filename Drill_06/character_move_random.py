@@ -1,6 +1,8 @@
 from pico2d import *
 import random
 
+#Drill06_2를 표시하기 위함
+
 KPU_WIDTH, KPU_HEIGHT = 1280, 1024
 def handle_events():
     global running
@@ -19,23 +21,23 @@ def handle_events():
 open_canvas(KPU_WIDTH, KPU_HEIGHT)
 kpu_ground = load_image('KPU_GROUND.png')
 character = load_image('animation_sheet.png')
-
+point = load_image('hand_arrow.png')
 running = True
 x, y = KPU_WIDTH // 2, KPU_HEIGHT // 2
 i = 0
 frame = 0
 turn = 1
 
-p1 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p2 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p3 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p4 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p5 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p6 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p7 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p8 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p9 = ((random.randint(0, 1200)), (random.randint(0, 800)))
-p10 = ((random.randint(0, 1200)), (random.randint(0, 800)))
+p1 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p2 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p3 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p4 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p5 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p6 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p7 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p8 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p9 = ((random.randint(0, 1200)), (random.randint(200, 800)))
+p10 = ((random.randint(0, 1200)), (random.randint(200, 800)))
 
 
 
@@ -43,6 +45,18 @@ while running:
     clear_canvas()
     kpu_ground.draw(KPU_WIDTH // 2, KPU_HEIGHT // 2)
     frame = (frame + 1) % 8
+
+    point.clip_draw(0, 0, 100, 100, p1[0] + 20, p1[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p2[0] + 20, p2[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p3[0] + 20, p3[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p4[0] + 20, p4[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p5[0] + 20, p5[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p6[0] + 20, p6[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p7[0] + 20, p7[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p8[0] + 20, p8[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p9[0] + 20, p9[1] - 20, 30, 30)
+    point.clip_draw(0, 0, 100, 100, p10[0] + 20, p10[1] - 20, 30, 30)
+
     # draw p1-p2
     if i < 100 and turn == 1:
         t = i / 100
