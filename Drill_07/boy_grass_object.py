@@ -29,8 +29,10 @@ class Ball:
         self.discrimination = random.randint(0, 1)
         self.speed = random.randint(3, 10)
     def update(self):
-        self.y += self.speed
-        
+        self.y -= self.speed
+        if self.y <= 90:
+            self.y = 90
+
     def draw(self):
         if self.discrimination == 0:
             self.image_small.clip_draw(0, 0, 21, 21, self.x, self.y)
