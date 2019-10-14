@@ -30,8 +30,10 @@ class Ball:
         self.speed = random.randint(3, 10)
     def update(self):
         self.y -= self.speed
-        if self.y <= 90:
-            self.y = 90
+        if self.y <= 70 and self.discrimination == 1:
+            self.y = 70
+        elif self.y <= 60 and self.discrimination == 0:
+            self.y = 60
 
     def draw(self):
         if self.discrimination == 0:
