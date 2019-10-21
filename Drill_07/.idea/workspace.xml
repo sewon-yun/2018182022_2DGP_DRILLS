@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdba27bc-f88e-4328-861a-1870fdce9fcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/boy_grass_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/boy_grass_object.py" afterDir="false" />
-    </list>
+    <list default="true" id="cdba27bc-f88e-4328-861a-1870fdce9fcd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +14,7 @@
   <component name="ProjectId" id="1SBfJDt0of2kmAkGsA5gvUXZAqo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2DGP-Project" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
