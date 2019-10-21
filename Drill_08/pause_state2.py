@@ -58,12 +58,18 @@ def handle_events():
             elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_p):
                 game_framework.pop_state()
     pass
+blink = 0
 def draw():
     global blink
     clear_canvas()
     grass.draw()
     boy.draw()
-    image1.draw(400, 300, 500, 500)
+    if blink <= 80:
+        image1.draw(400, 300, 500, 500)
+    elif blink == 160:
+        blink = 0
+    blink += 1
+    update_canvas()
     update_canvas()
     pass
 
