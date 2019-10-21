@@ -16,8 +16,8 @@ class Grass:
 
 class Boy:
     def __init__(self):
-        self.x, self.y = 0, 90
-        self.frame = 0
+        self.x, self.y = main_state.boy.x, main_state.boy.y
+        self.frame = main_state.boy.frame
         self.image = load_image('run_animation.png')
         self.dir = 1
 
