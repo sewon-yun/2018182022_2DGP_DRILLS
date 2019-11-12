@@ -35,9 +35,8 @@ class Bird:
         self.x, self.y = 0, 300
         self.frameX, self.frameY = 0, 0
         self.image = load_image('bird_animation.png')
-        self.font = load_font('ENCR10B.TTF', 16)
         self.dir = 1
-        self.velocity = 2
+        self.velocity = RUN_SPEED_PPS
         self.frame = 0
 
     def update(self):
@@ -45,13 +44,15 @@ class Bird:
         self.frameX = frameX_location_table[int(self.frame)]
         self.frameY = frameY_location_table[int(self.frame)]
 
+        self.x += self.velocity * game_framework.frame_time
+
         if self.dir == 1:
-            self.x += self.velocity
-            if self.x > 1600:
+            self.velocity = RUN_SPEED_PPS
+            if self.x > 1500:
                 self.dir = -1
         else:
-            self.x -= self.velocity
-            if self.x < 0:
+            self.velocity = -RUN_SPEED_PPS
+            if self.x < 100:
                 self.dir = 1
         pass
     def draw(self):
@@ -60,8 +61,6 @@ class Bird:
                                            0.0, 'h', self.x, self.y, 100, 100)
         else:
             self.image.clip_draw(self.frameX, self.frameY, 183, 168, self.x, self.y, 100, 100)
-
-        self.font.draw(self.x - 60, self.y + 50, '(Time: %3.2f)' % get_time(), (255, 255, 0))
 
 
 
