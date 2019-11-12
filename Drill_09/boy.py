@@ -2,7 +2,7 @@ from pico2d import *
 
 # Boy Event
 # fill here
-RIGHT_DOWN, LEFT_DOWN, RIGHT_UP, LEFT_UP, SLEEP_TIMER, SHIFT_DOWN, SHIFT_UP = range(7)
+RIGHT_DOWN, LEFT_DOWN, RIGHT_UP, LEFT_UP, SLEEP_TIMER, SHIFT_DOWN, SHIFT_UP, SHIFT_TIMER = range(8)
 
 key_event_table = {
     (SDL_KEYDOWN, SDLK_RIGHT): RIGHT_DOWN,
@@ -104,6 +104,7 @@ class DashState:
         elif event == LEFT_UP:
             boy.velocity += 1
         boy.dir = boy.velocity
+        boy.shifttimer = 500
     @staticmethod
     def exit(boy, event):
         pass
@@ -112,6 +113,9 @@ class DashState:
     def do(boy):
         boy.frame = (boy.frame + 1) % 8
         boy.timer -= 1
+        boy.shifttimer -= 1
+        if boy.shifttimer == 0:
+            boy.add_event(SLEEP_TIMER)
         boy.x += boy.velocity * 2
         boy.x = clamp(25, boy.x, 800 - 25)
 
@@ -125,15 +129,15 @@ next_state_table = {
 # fill here
     IdleState: {RIGHT_UP: RunState, LEFT_UP: RunState,
                 RIGHT_DOWN: RunState, LEFT_DOWN: RunState, SLEEP_TIMER: SleepState,
-                SHIFT_DOWN: DashState, SHIFT_UP: RunState},
+                SHIFT_DOWN: IdleState, SHIFT_UP: IdleState, SHIFT_TIMER: IdleState},
     RunState: {RIGHT_UP: IdleState, LEFT_UP: IdleState,
                LEFT_DOWN: IdleState, RIGHT_DOWN: IdleState,
-                SHIFT_DOWN: DashState, SHIFT_UP: RunState},
+                SHIFT_DOWN: DashState, SHIFT_UP: IdleState},
     SleepState: {LEFT_DOWN: RunState, RIGHT_DOWN: RunState,
                  LEFT_UP: RunState, RIGHT_UP: RunState},
-    DashState: {RIGHT_UP: IdleState, LEFT_UP: IdleState,
-               LEFT_DOWN: IdleState, RIGHT_DOWN: IdleState,
-                SHIFT_DOWN: DashState, SHIFT_UP: RunState}
+    DashState: {RIGHT_UP: DashState, LEFT_UP: DashState,
+               LEFT_DOWN: DashState, RIGHT_DOWN: DashState,
+                SHIFT_DOWN: DashState, SHIFT_UP: IdleState}
 }
 
 class Boy:
@@ -152,7 +156,7 @@ class Boy:
         pass
 
 
-    def change_state(self,  state):
+    def change_state(self, state):
         # fill here
         pass
 

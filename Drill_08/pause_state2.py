@@ -70,7 +70,6 @@ def draw():
         blink = 0
     blink += 1
     update_canvas()
-    update_canvas()
     pass
 
 
