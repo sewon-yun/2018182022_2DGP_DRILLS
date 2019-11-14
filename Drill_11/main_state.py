@@ -84,12 +84,11 @@ def update():
             ball.stop()
         if collide(brick, ball) and not ball.isCollide:
             ball.isCollide = True
-            if ball.y - 23 > brick.y:
+            if ball.y - 21 > brick.y:
                 ball.stop()
             ball.interrude = ball.x - brick.x
         if collide(brick, ball) and ball.isCollide:
             ball.x = brick.x + ball.interrude
-
 
 def draw():
     clear_canvas()
