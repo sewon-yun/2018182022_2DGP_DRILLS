@@ -44,7 +44,7 @@ class IdleState:
             boy.velocity -= RUN_SPEED_PPS
         elif event == LEFT_UP:
             boy.velocity += RUN_SPEED_PPS
-        elif event == SPACE:
+        elif event == SPACE and not boy.isJump:
             boy.isJump = True
             boy.y_velocity = RUN_SPEED_PPS * 5
         boy.timer = 1000
@@ -87,7 +87,7 @@ class RunState:
             boy.velocity -= RUN_SPEED_PPS
         elif event == LEFT_UP:
             boy.velocity += RUN_SPEED_PPS
-        elif event == SPACE:
+        elif event == SPACE and not boy.isJump:
             boy.isJump = True
             boy.y_velocity = RUN_SPEED_PPS * 5
         boy.dir = clamp(-1, boy.velocity, 1)
@@ -156,12 +156,15 @@ class Boy:
         self.frame = 0
         self.event_que = []
         self.isJump = True
+        self.isCollide = True
+        self.is_onbrick = False
+        self.on_brick_speed = 0
         self.y_velocity = 0
         self.cur_state = IdleState
         self.cur_state.enter(self, None)
 
     def get_bb(self):
-        return self.x - 50, self.y - 50, self.x + 50, self.y + 50
+        return self.x - 25, self.y - 45, self.x + 25, self.y + 45
 
 
     def add_event(self, event):
@@ -177,8 +180,7 @@ class Boy:
 
     def draw(self):
         self.cur_state.draw(self)
-        self.font.draw(self.x - 60, self.y + 50, '(Time: %3.2f)' % get_time(), (255, 255, 0))
-        draw_rectangle(*self.get_bb())
+        # self.font.draw(self.x - 60, self.y + 50, '(Time: %3.2f)' % get_time(), (255, 255, 0))
 
 
     def handle_event(self, event):
