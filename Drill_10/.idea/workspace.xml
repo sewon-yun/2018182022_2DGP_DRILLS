@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c159a7b-d850-4a0f-b237-78f6dc8031f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lecture06_HandlingInputs/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture06_HandlingInputs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture07_Linear_Movement/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture07_Linear_Movement/line.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture08_Curve_Movement/curve.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture08_Curve_Movement/curve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture09_Game_Obejects/boy_grass_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture09_Game_Obejects/boy_grass_object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture10_Game_Framework/main_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture10_Game_Framework/main_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture10_Game_Framework/mygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture10_Game_Framework/mygame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture10_Game_Framework/pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture10_Game_Framework/pause.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture10_Game_Framework/start_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture10_Game_Framework/start_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture10_Game_Framework/title_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture10_Game_Framework/title_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture11_Character_Controller/boy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture11_Character_Controller/boy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture11_Character_Controller/boys_team_1000.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture11_Character_Controller/boys_team_1000.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture12_Game_World/ball.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture12_Game_World/ball.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture12_Game_World/boy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture12_Game_World/boy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture12_Game_World/main_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture12_Game_World/main_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lecture12_Game_World/mygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture12_Game_World/mygame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boy.py" beforeDir="false" afterPath="$PROJECT_DIR$/boy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_framework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +16,7 @@
   <component name="ProjectId" id="1TW4hmtdPErqZo991bLO4u6dIeS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2DGP-Project" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,7 +120,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
