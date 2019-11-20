@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c159a7b-d850-4a0f-b237-78f6dc8031f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bird.py" beforeDir="false" afterPath="$PROJECT_DIR$/bird.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +17,7 @@
   <component name="ProjectId" id="1TW4hmtdPErqZo991bLO4u6dIeS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2DGP-Project" />
+    <property name="last_opened_file_path" value="C:/2018182022 yunsewon/2DGP/Labs/Lecture15_AI" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
