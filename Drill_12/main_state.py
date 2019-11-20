@@ -17,6 +17,7 @@ boy = None
 zombie = None
 balls = []
 
+quit_timer = 3.0
 
 def collide(a, b):
     # fill here
@@ -84,6 +85,7 @@ def handle_events():
 
 
 def update():
+    global quit_timer
     for game_object in game_world.all_objects():
         game_object.update()
     for ball in balls:
@@ -100,6 +102,11 @@ def update():
             game_world.remove_object(zombie)
         else:
             game_world.remove_object(boy)
+            quit_timer -= game_framework.frame_time
+            if quit_timer < 0:
+                game_framework.quit()
+
+
 
 
 def draw():
